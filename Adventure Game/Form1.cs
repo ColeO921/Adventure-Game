@@ -458,7 +458,6 @@ namespace Adventure_Game
                     pictureOutput.BackgroundImage = Properties.Resources.page19;
                     break;
                 case 20://ending #9
-                    outputLabel.Text = "What are you doing!? This was your chance to mediate the situation... ";
                     questionLabel.Text = "Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
@@ -468,7 +467,11 @@ namespace Adventure_Game
                         ending9 = true;
                         endingNum = endingNum + 1;
                         endingLabel.Text = $"Ending's {endingNum}/13";
-                    }
+                    } 
+                    outputLabel.Text = "What are you doing!? ";
+                    Refresh();
+                    Thread.Sleep(2000);
+                    outputLabel.Text += "This was your chance to mediate the situation... ";
                     break;
                 case 21://ending #11
                     outputLabel.Text = "You angered the rioters... they kill the mayor... the violence spreads... everyone thinks you helped them and you get arrested... ";
